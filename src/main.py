@@ -11,7 +11,7 @@ def main():
         basepath = sys.argv[1]
     else:
         raise Exception("Error: invalid argument entered")
-    copystatic()
+    copystatic(public_path="./docs")
     #generate_page("content/index.md","template.html","public/index.html",basepath)
     generate_pages_recursive("./content","template.html","./docs",basepath)
 main()
